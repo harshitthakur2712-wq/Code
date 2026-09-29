@@ -1,86 +1,624 @@
 <html>
-	<head>
-		<title>Chess</title>
-		<style>
-			#ChessBoard
-			{
-			height:1920px;
-			width:1920px;
-			border:10px solid;
-			border-color:black;
-			}
-			#white
-			{
-			height:240px;
-			width:240px;
-			font-size:150px;
-			text-shadow:5px 3px white;
-			background-color:white;
-			float:left;
-			}
-			#black
-			{
-			height:240px;	
-			width:240px;
-			font-size:150px;
-			text-shadow:5px 3px white;
-			background-color:black;
-			float:left;
-			}
-		</style>
-	</head>
-	<body>
-		<center>
-			<div id="ChessBoard">
-				<div id="1st row">
-					<div id="white">&#9820;</div> <div id="black">&#9822;</div> 
-					<div id="white">&#9821</div> <div id="black">&#9818</div> 
-					<div id="white">&#9819</div> <div id="black">&#9821</div> 
-					<div id="white">&#9822;</div> <div id="black">&#9820;</div>		
-				</div>
-				<div id="2nd row">
-					<div id="black">&#9823;</div> <div id="white">&#9823;</div> 
-					<div id="black">&#9823;</div> <div id="white">&#9823;</div> 
-					<div id="black">&#9823;</div> <div id="white">&#9823;</div> 
-					<div id="black">&#9823;</div> <div id="white">&#9823;</div>	
-				</div>
-				<div id="3rd row">
-					<div id="white"></div> <div id="black"></div> 
-					<div id="white"></div> <div id="black"></div> 
-					<div id="white"></div> <div id="black"></div> 
-					<div id="white"></div> <div id="black"></div>
-				</div>		
-				<div id="4th row">
-					<div id="black"></div> <div id="white"></div> 
-					<div id="black"></div> <div id="white"></div> 
-					<div id="black"></div> <div id="white"></div> 
-					<div id="black"></div> <div id="white"></div>		
-				</div>
-				<div id="5th row">
-					<div id="white"></div> <div id="black"></div> 
-					<div id="white"></div> <div id="black"></div> 
-					<div id="white"></div> <div id="black"></div> 
-					<div id="white"></div> <div id="black"></div>		
-				</div>
-				<div id="6th row">
-					<div id="black"></div> <div id="white"></div> 
-					<div id="black"></div> <div id="white"></div> 
-					<div id="black"></div> <div id="white"></div> 
-					<div id="black"></div> <div id="white"></div>
-				</div>		
-				<div id="7th row">
-					<div id="white">&#9817;</div> <div id="black">&#9817;</div> 
-					<div id="white">&#9817;</div> <div id="black">&#9817;</div> 
-					<div id="white">&#9817;</div> <div id="black">&#9817;</div> 
-					<div id="white">&#9817;</div> <div id="black">&#9817;</div>		
-				</div>
-				<div id="8th row">
-					<div id="black">&#9814;</div> <div id="white">&#9816;</div> 
-					<div id="black">&#9815;</div> <div id="white">&#9812;</div> 
-					<div id="black">&#9813;</div> <div id="white">&#9815;</div> 
-					<div id="black">&#9816;</div> <div id="white">&#9814;</div>		
-				</div>
-			</div>
-		</center>
-	</body>
+<head>
+<style>
+#outer{
+height:1000px;
+width:1000px;
+border:2px solid;
+}
+
+#row1{
+height:125px;
+width:1000px;
+}
+
+#r1box1{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r1box2{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r1box3{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r1box4{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r1box5{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r1box6{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r1box7{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r1box8{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#row2{
+height:125px;
+width:1000px;
+}
+
+#r2box1{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r2box2{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r2box3{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r2box4{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r2box5{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r2box6{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r2box7{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r2box8{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+
+#row3{
+height:125px;
+width:1000px;
+}
+
+#r3box1{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r3box2{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r3box3{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r3box4{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r3box5{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r3box6{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r3box7{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r3box8{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#row4{
+height:125px;
+width:1000px;
+}
+
+#r4box1{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r4box2{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r4box3{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r4box4{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r4box5{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r4box6{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r4box7{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r4box8{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#row5{
+height:125px;
+width:1000px;
+}
+
+#r5box1{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r5box2{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r5box3{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r5box4{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r5box5{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r5box6{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r5box7{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r5box8{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#row6{
+height:125px;
+width:1000px;
+}
+
+#r6box1{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r6box2{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r6box3{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r6box4{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r6box5{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r6box6{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r6box7{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r6box8{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+
+#row7{
+height:125px;
+width:1000px;
+}
+
+#r7box1{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r7box2{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r7box3{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r7box4{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r7box5{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r7box6{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r7box7{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r7box8{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#row8{
+height:125px;
+width:1000px;
+}
+
+#r8box1{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r8box2{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r8box3{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r8box4{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r8box5{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r8box6{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+#r8box7{
+height:125px;
+width:125px;
+background-color:black;
+float:left;
+}
+
+#r8box8{
+height:125px;
+width:125px;
+background-color:white;
+float:left;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div id="outer">
+<div id="row1">
+<div id="r1box1"></div>
+<div id="r1box2"></div>
+<div id="r1box3"></div>
+<div id="r1box4"></div>
+<div id="r1box5"></div>
+<div id="r1box6"></div>
+<div id="r1box7"></div>
+<div id="r1box8"></div>
+</div>
+
+<div id="row2">
+<div id="r2box1"></div>
+<div id="r2box2"></div>
+<div id="r2box3"></div>
+<div id="r2box4"></div>
+<div id="r2box5"></div>
+<div id="r2box6"></div>
+<div id="r2box7"></div>
+<div id="r2box8"></div>
+</div>
+
+<div id="row3">
+<div id="r3box1"></div>
+<div id="r3box2"></div>
+<div id="r3box3"></div>
+<div id="r3box4"></div>
+<div id="r3box5"></div>
+<div id="r3box6"></div>
+<div id="r3box7"></div>
+<div id="r3box8"></div>
+</div>
+
+<div id="row4">
+<div id="r4box1"></div>
+<div id="r4box2"></div>
+<div id="r4box3"></div>
+<div id="r4box4"></div>
+<div id="r4box5"></div>
+<div id="r4box6"></div>
+<div id="r4box7"></div>
+<div id="r4box8"></div>
+</div>
+
+
+
+
+
+<div id="row5">
+<div id="r5box1"></div>
+<div id="r5box2"></div>
+<div id="r5box3"></div>
+<div id="r5box4"></div>
+<div id="r5box5"></div>
+<div id="r5box6"></div>
+<div id="r5box7"></div>
+<div id="r5box8"></div>
+</div>
+
+<div id="row6">
+<div id="r6box1"></div>
+<div id="r6box2"></div>
+<div id="r6box3"></div>
+<div id="r6box4"></div>
+<div id="r6box5"></div>
+<div id="r6box6"></div>
+<div id="r6box7"></div>
+<div id="r6box8"></div>
+</div>
+
+<div id="row7">
+<div id="r7box1"></div>
+<div id="r7box2"></div>
+<div id="r7box3"></div>
+<div id="r7box4"></div>
+<div id="r7box5"></div>
+<div id="r7box6"></div>
+<div id="r7box7"></div>
+<div id="r7box8"></div>
+</div>
+
+<div id="row8">
+<div id="r8box1"></div>
+<div id="r8box2"></div>
+<div id="r8box3"></div>
+<div id="r8box4"></div>
+<div id="r8box5"></div>
+<div id="r8box6"></div>
+<div id="r8box7"></div>
+<div id="r8box8"></div>
+</div>
+
+
+
+
+
+</div>
+
+</body>
 </html>
